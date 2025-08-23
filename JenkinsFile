@@ -7,7 +7,7 @@ pipeline {
                sh "mvn compile"
            } 
         }
-        stage ('UnitTest') {
+        stage ('Unit Test') {
             steps {
                 echo "Test the code"
                 sh "mvn test"
