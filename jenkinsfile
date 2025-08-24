@@ -1,17 +1,20 @@
 pipeline {
-    agent any
+    agent none
     stages {
         stage('Compile') {
-           steps {
+            agent any
+            steps {
 		        sh "mvn compile"
            } 
         }
         stage ('UnitTest') {
+            agent any
             steps {
-		sh "mvn test"
+		        sh "mvn test"
             }
         }
         stage ('Package') {
+            agent any
             steps {
 		    sh "mvn package"
             }
