@@ -1,5 +1,8 @@
 pipeline {
     agent none
+    tool {
+        mvn "mymvn"
+    }
     stages {
         stage('Compile') {
             agent any
